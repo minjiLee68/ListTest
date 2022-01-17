@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8303E727955830007413CB /* BestFoodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8303E627955830007413CB /* BestFoodInfo.swift */; };
 		0AEDCD062791466900FD5CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDCD052791466900FD5CD0 /* AppDelegate.swift */; };
 		0AEDCD082791466900FD5CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDCD072791466900FD5CD0 /* SceneDelegate.swift */; };
 		0AEDCD0D2791466900FD5CD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEDCD0B2791466900FD5CD0 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A8303E627955830007413CB /* BestFoodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFoodInfo.swift; sourceTree = "<group>"; };
 		0AEDCD022791466900FD5CD0 /* ListTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEDCD052791466900FD5CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AEDCD072791466900FD5CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				0AEDCD072791466900FD5CD0 /* SceneDelegate.swift */,
 				0AEDCD0B2791466900FD5CD0 /* Main.storyboard */,
 				0AEDCD192791468D00FD5CD0 /* ListViewController.swift */,
+				0A8303E627955830007413CB /* BestFoodInfo.swift */,
 				0AEDCD0E2791466900FD5CD0 /* Assets.xcassets */,
 				0AEDCD102791466900FD5CD0 /* LaunchScreen.storyboard */,
 				0AEDCD132791466900FD5CD0 /* Info.plist */,
@@ -141,6 +144,7 @@
 				0AEDCD062791466900FD5CD0 /* AppDelegate.swift in Sources */,
 				0AEDCD082791466900FD5CD0 /* SceneDelegate.swift in Sources */,
 				0AEDCD1A2791468D00FD5CD0 /* ListViewController.swift in Sources */,
+				0A8303E727955830007413CB /* BestFoodInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

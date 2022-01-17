@@ -11,7 +11,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var mylovefood: UILabel!
     
-    let nameList = ["마라탕", "피자", "떡볶이", "삼겹살", "콜라"]
+    let foodListViewModel = ListViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,15 +19,15 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.layer.cornerRadius = 15
-        return nameList.count
+        return foodListViewModel.numOfListCount
     }
        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "List", for: indexPath) as? CustomCell else {
             return UITableViewCell()
         }
-        let name = nameList[indexPath.row]
-        cell.nameText.text = name
+        let foodName = foodListViewModel.foodInfoList[indexPath.row]
+        cell.update(info: foodName)
         return cell
     }
     
@@ -38,4 +38,25 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 class CustomCell: UITableViewCell {
     @IBOutlet weak var nameText: UILabel!
+    
+    func update(info: BestFoodInfo) {
+        nameText.text = info.foodName
+    }
+}
+
+class ListViewModel {
+    let foodInfoList: [BestFoodInfo] = [
+        BestFoodInfo(foodName: "마라탕"),
+        BestFoodInfo(foodName: "삼겹살"),
+        BestFoodInfo(foodName: "떡볶이"),
+        BestFoodInfo(foodName: "치킨"),
+        BestFoodInfo(foodName: "조개"),
+        BestFoodInfo(foodName: "해물찜"),
+        BestFoodInfo(foodName: "라면"),
+        BestFoodInfo(foodName: "닭발"),
+    ]
+    
+    var numOfListCount: Int {
+        return foodInfoList.count
+    }
 }
