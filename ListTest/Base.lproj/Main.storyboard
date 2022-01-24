@@ -16,12 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eti-XD-ian">
-                                <rect key="frame" x="53" y="144" width="308" height="568"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G74-Uc-VZA">
+                                <rect key="frame" x="53" y="194" width="308" height="548"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eti-XD-ian">
+                                <rect key="frame" x="53" y="194" width="308" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="List" id="gIu-ib-eTG" customClass="CustomCell" customModule="ListTest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="308" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="308" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gIu-ib-eTG" id="4JN-cP-qU6">
                                             <rect key="frame" x="0.0" y="0.0" width="308" height="50.5"/>
@@ -51,27 +55,34 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vfc-Oe-tns"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내가 좋아하는 음식들" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-bq-bhR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😻 Food that I like 😍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZK-bq-bhR">
                                 <rect key="frame" x="53" y="78" width="308" height="28"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <color key="textColor" red="0.34582149620000002" green="0.22578563760000001" blue="0.1965308777" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                                <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.93542295689999999" green="0.883628941" blue="0.82366834460000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QZK-bq-bhR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="0Hr-Rq-Bvc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eti-XD-ian" secondAttribute="bottom" constant="150" id="EBn-S2-ztj"/>
+                            <constraint firstItem="eti-XD-ian" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="1OC-A5-LdY"/>
+                            <constraint firstItem="eti-XD-ian" firstAttribute="centerX" secondItem="QZK-bq-bhR" secondAttribute="centerX" id="95U-8z-36g"/>
+                            <constraint firstItem="G74-Uc-VZA" firstAttribute="top" secondItem="eti-XD-ian" secondAttribute="top" id="E9J-f2-aTz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eti-XD-ian" secondAttribute="bottom" constant="120" id="EBn-S2-ztj"/>
                             <constraint firstItem="eti-XD-ian" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="Jai-rz-IWR"/>
                             <constraint firstItem="QZK-bq-bhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="LbQ-8F-6iq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZK-bq-bhR" secondAttribute="trailing" constant="53" id="OzK-Cm-8wD"/>
+                            <constraint firstItem="G74-Uc-VZA" firstAttribute="trailing" secondItem="eti-XD-ian" secondAttribute="trailing" id="Yg2-hN-ms5"/>
+                            <constraint firstItem="G74-Uc-VZA" firstAttribute="bottom" secondItem="eti-XD-ian" secondAttribute="bottom" id="aoh-x7-hH8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eti-XD-ian" secondAttribute="trailing" constant="53" id="hSh-bk-736"/>
-                            <constraint firstItem="eti-XD-ian" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="nXV-IE-VWK"/>
+                            <constraint firstItem="G74-Uc-VZA" firstAttribute="leading" secondItem="eti-XD-ian" secondAttribute="leading" id="zmH-YZ-UZW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mylovefood" destination="QZK-bq-bhR" id="8e6-4n-R4Y"/>
+                        <outlet property="tableView" destination="eti-XD-ian" id="gRV-zk-NfQ"/>
+                        <outlet property="viewBG" destination="G74-Uc-VZA" id="Pmt-Mm-MDq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,6 +91,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

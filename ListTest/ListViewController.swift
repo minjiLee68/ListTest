@@ -10,11 +10,16 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var mylovefood: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewBG: UIView!
     
     let foodListViewModel = ListViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewBG.layer.cornerRadius = 15
+        viewBackgroundShadow()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +38,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
+    }
+    
+    func viewBackgroundShadow() {
+        self.viewBG.layer.shadowRadius = 5
+        self.viewBG.layer.shadowOpacity = 0.3
+        self.viewBG.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.viewBG.layer.shadowColor = UIColor.black.cgColor
     }
 }
 
@@ -54,6 +66,14 @@ class ListViewModel {
         BestFoodInfo(foodName: "해물찜"),
         BestFoodInfo(foodName: "라면"),
         BestFoodInfo(foodName: "닭발"),
+        BestFoodInfo(foodName: "마라탕"),
+        BestFoodInfo(foodName: "삼겹살"),
+        BestFoodInfo(foodName: "떡볶이"),
+        BestFoodInfo(foodName: "치킨"),
+        BestFoodInfo(foodName: "조개"),
+        BestFoodInfo(foodName: "해물찜"),
+        BestFoodInfo(foodName: "라면"),
+        BestFoodInfo(foodName: "닭발")
     ]
     
     var numOfListCount: Int {
